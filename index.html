@@ -299,6 +299,26 @@ footer a.soc{display:flex;margin-bottom:0}
 .proj-actions{gap:10px;margin-top:28px}
 @media(min-width:861px){.btn{padding:11px 22px;font-size:1rem}.menu-btn{padding:9px 18px;font-size:.95rem}.actions .btn{flex:0 0 auto;max-width:none}.plan .btn{padding:10px 18px}}
 @media(max-width:560px){.btn{padding:9px 16px;font-size:.9rem}.actions .btn{min-width:0}form .btn{justify-self:stretch}}
+/* hero art */
+.hero .beam,.hero::after{display:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;align-items:center}
+.hero-copy{min-width:0}
+.hero-art{position:relative;width:100%;max-width:300px;margin:0 auto;aspect-ratio:1/1}
+.hero-art svg{display:block;width:100%;height:100%}
+.spin{transform-origin:200px 200px;animation:artspin 40s linear infinite}
+.s-a{animation-duration:90s}.s-b{animation-duration:50s;animation-direction:reverse}.s-sweep{animation-duration:7s}
+.pulse{transform-origin:200px 200px;animation:artpulse 4s ease-in-out infinite}
+@keyframes artspin{to{transform:rotate(360deg)}}
+@keyframes artpulse{50%{transform:scale(1.12);opacity:.3}}
+@media(min-width:861px){.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px}.hero-art{max-width:520px;justify-self:end}.hero h1{font-size:clamp(2.5rem,5vw,4.2rem)}}
+@media(max-width:520px){.hero-art{max-width:250px}}
+@media(prefers-reduced-motion:reduce){.spin,.pulse{animation:none}}
+/* hero photo (falls back to the graphic if hero.jpg is missing) */
+.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:22px;border:1px solid rgba(91,140,255,.55);box-shadow:0 0 70px rgba(47,107,255,.45),0 0 0 6px rgba(47,107,255,.08);z-index:1}
+.hero-art.has-img{aspect-ratio:4/5}
+.hero-art.has-img svg{display:none}
+@media(min-width:861px){.hero-art.has-img{max-width:430px}}
+@media(max-width:520px){.hero-art.has-img{max-width:240px}}
 </style>
 </head>
 <body>
@@ -344,7 +364,8 @@ footer a.soc{display:flex;margin-bottom:0}
 <main id="top">
   <div class="hero">
     <div class="beam" aria-hidden="true"></div>
-    <div class="wrap">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
       <p class="crumbs"><a href="#top">Home</a> / Websites / Europe</p>
       <h1>Websites that bring customers to you.</h1>
       <p class="sub">Manarix builds clear, mobile-friendly websites for small businesses and sole traders, so customers can find you and trust you. Simple fixed prices, no agency overhead.</p>
@@ -353,6 +374,41 @@ footer a.soc{display:flex;margin-bottom:0}
         <a class="btn ghost" href="#pricing">See pricing</a>
       </div>
       <p class="price"><b>Websites from €200</b>, excl. VAT. Choose a package from Starter to Complete. You agree the scope and price before work starts, and a 50% deposit books your slot.</p>
+      </div>
+      <div class="hero-art">
+        <img src="hero.jpg" alt="Portrait of the person behind Manarix" width="880" height="1100" fetchpriority="high" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+          <defs>
+            <radialGradient id="ha-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2F6BFF" stop-opacity=".55"/><stop offset=".55" stop-color="#2F6BFF" stop-opacity=".12"/><stop offset="1" stop-color="#2F6BFF" stop-opacity="0"/></radialGradient>
+            <radialGradient id="ha-core" cx="50%" cy="42%" r="58%"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#A9C3FF"/><stop offset=".6" stop-color="#2F6BFF"/><stop offset="1" stop-color="#0F2A5F"/></radialGradient>
+            <radialGradient id="ha-beam" gradientUnits="userSpaceOnUse" cx="200" cy="200" r="190"><stop offset="0" stop-color="#5B8CFF" stop-opacity=".55"/><stop offset="1" stop-color="#5B8CFF" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="200" fill="url(#ha-glow)"/>
+          <g class="spin s-sweep"><path d="M200 200 L390 200 A190 190 0 0 0 364.5 105 Z" fill="url(#ha-beam)"/></g>
+          <g class="spin s-a" fill="none" stroke="#2F6BFF" stroke-linecap="round">
+            <circle cx="200" cy="200" r="186" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="2 8"/>
+            <circle cx="200" cy="200" r="168" stroke="#5B8CFF" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="60 14 6 14"/>
+          </g>
+          <g transform="rotate(-18 200 200)" fill="none" stroke="#5B8CFF" stroke-width="1" stroke-opacity=".55">
+            <circle cx="200" cy="200" r="104" stroke-opacity=".9"/>
+            <ellipse cx="200" cy="200" rx="104" ry="14"/>
+            <ellipse cx="200" cy="148" rx="90" ry="12"/><ellipse cx="200" cy="252" rx="90" ry="12"/>
+            <ellipse cx="200" cy="114" rx="58" ry="8"/><ellipse cx="200" cy="286" rx="58" ry="8"/>
+            <ellipse cx="200" cy="200" rx="30" ry="104"/><ellipse cx="200" cy="200" rx="60" ry="104"/><ellipse cx="200" cy="200" rx="90" ry="104"/>
+            <path d="M200 96V304"/>
+          </g>
+          <g class="spin s-b">
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#5B8CFF" stroke-opacity=".35" stroke-width="1"/>
+            <circle cx="350" cy="200" r="11" fill="#5B8CFF" opacity=".3"/><circle cx="350" cy="200" r="5" fill="#C9DAFF"/>
+            <circle cx="70" cy="125" r="8" fill="#5B8CFF" opacity=".3"/><circle cx="70" cy="125" r="3.5" fill="#9DBBFF"/>
+            <circle cx="174" cy="348" r="8" fill="#5B8CFF" opacity=".3"/><circle cx="174" cy="348" r="3.5" fill="#9DBBFF"/>
+          </g>
+          <circle class="pulse" cx="200" cy="200" r="62" fill="#2F6BFF" opacity=".22"/>
+          <circle cx="200" cy="200" r="42" fill="url(#ha-core)"/>
+          <path d="M200 6v14M200 380v14M6 200h14M380 200h14" stroke="#5B8CFF" stroke-opacity=".6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <g fill="#9DBBFF"><circle cx="60" cy="70" r="1.4" opacity=".8"/><circle cx="340" cy="60" r="1.2" opacity=".6"/><circle cx="350" cy="330" r="1.5" opacity=".8"/><circle cx="48" cy="300" r="1.2" opacity=".6"/><circle cx="300" cy="372" r="1.3" opacity=".7"/><circle cx="112" cy="26" r="1.3" opacity=".7"/></g>
+        </svg>
+      </div>
     </div>
   </div>
 
