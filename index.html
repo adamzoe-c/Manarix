@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Affordable websites for small businesses | Manarix</title>
+<meta name="description" content="Manarix builds simple, mobile-friendly websites for small businesses and sole traders across Europe. Fixed prices from €200.">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://manarix.eu/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Manarix">
+<meta property="og:title" content="Affordable websites for small businesses | Manarix">
+<meta property="og:description" content="Simple, mobile-friendly websites for small businesses and sole traders. Packages from €200.">
+<meta property="og:url" content="https://manarix.eu/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='34' fill='%232F6BFF'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000; --bg2:#0B0B0D; --line:#212126; --text:#F4F5F7; --muted:#9A9AA5;
+  --blue:#2F6BFF; --blue2:#5B8CFF;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;max-width:22ch}
+.lead{color:var(--muted);max-width:58ch;margin-top:16px}
+
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none}
+.skip:focus{left:16px}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(0,0,0,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.45rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+
+
+/* menu */
+.mt{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.menu-btn{display:flex;align-items:center;gap:12px;border:1.5px solid #3A3A42;border-radius:999px;padding:9px 18px;font-weight:600;cursor:pointer;transition:border-color .2s;user-select:none}
+.menu-btn:hover,.mt:checked ~ .wrap .menu-btn{border-color:var(--blue)}
+.mt:focus-visible ~ .wrap .menu-btn{outline:3px solid var(--blue2);outline-offset:3px}
+.bars{display:grid;gap:4px;width:18px}
+.bars i{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
+.mt:checked ~ .wrap .bars i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mt:checked ~ .wrap .bars i:nth-child(2){opacity:0}
+.mt:checked ~ .wrap .bars i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.menu-panel{display:none;position:absolute;top:100%;left:0;right:0;background:#000;border-bottom:1px solid var(--line);max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto}
+.mt:checked ~ .menu-panel{display:block}
+.menu-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;padding-top:12px;padding-bottom:30px}
+.menu-links{list-style:none}
+.menu-links a{display:block;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.5rem;color:#E6E7EC}
+.menu-links a:hover,.menu-links a:focus-visible{color:var(--blue2)}
+.menu-side{padding-top:18px}
+.menu-side h4{font-family:var(--display);font-size:.95rem;color:var(--muted);font-weight:500;margin:0 0 8px}
+.menu-side h4:not(:first-child){margin-top:26px}
+.soc{display:flex;align-items:center;gap:12px;padding:9px 0;text-decoration:none;color:#E6E7EC;font-size:1.02rem}
+.soc:hover{color:var(--blue2)}
+.linkbtn{background:none;border:0;font:inherit;font-size:1.02rem;cursor:pointer;text-align:left;width:100%}
+section{scroll-margin-top:68px}
+
+/* cookie banner */
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:40;max-width:720px;margin:0 auto;background:#111115;border:1px solid #2C2C33;border-radius:14px;padding:20px 22px;box-shadow:0 10px 40px rgba(0,0,0,.6);padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+.cookie[hidden]{display:none}
+.cookie p{font-size:.95rem;color:#C9CAD2;margin-bottom:14px}
+.cookie a{color:var(--blue2)}
+.cookie .row{display:flex;gap:10px;flex-wrap:wrap}
+.cookie .btn{padding:10px 20px;font-size:.95rem}
+
+/* buttons */
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--blue);background:var(--blue);color:#fff;font:inherit;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
+.btn:hover{background:var(--blue2);border-color:var(--blue2)}
+.btn.ghost{background:transparent;border-color:#3A3A42}
+.btn.ghost:hover{border-color:#fff;background:transparent}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:190px 0 110px}
+.beam{position:absolute;right:-300px;top:-300px;width:960px;height:960px;border-radius:50%;
+  background:conic-gradient(from 0deg,rgba(47,107,255,.5) 0deg,rgba(47,107,255,0) 36deg,rgba(47,107,255,0) 360deg);
+  animation:sweep 10s linear infinite;pointer-events:none}
+.hero::after{content:"";position:absolute;right:80px;top:84px;width:14px;height:14px;border-radius:50%;background:var(--blue2);box-shadow:0 0 44px 16px rgba(47,107,255,.65)}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.crumbs{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.crumbs a{text-decoration:none}
+.hero h1{font-size:clamp(2.5rem,6.6vw,4.7rem);font-weight:800;max-width:14ch;position:relative}
+.hero p.sub{margin-top:26px;max-width:52ch;font-size:1.15rem;color:#BFC0C9;position:relative}
+.actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;position:relative}
+.price{margin-top:26px;font-size:.93rem;color:var(--muted);max-width:60ch;position:relative}
+.price b{color:#fff}
+
+section{padding:96px 0;border-top:1px solid var(--line)}
+.alt{background:var(--bg2)}
+
+/* why */
+.why .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:36px}
+.why p{color:#C0C1CA}
+.why p+p{margin-top:16px}
+.why a{color:var(--blue2);text-underline-offset:4px;display:inline-block;margin-top:20px}
+
+/* services */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;margin-top:48px}
+.item{border-top:2px solid var(--blue);padding:22px 0 34px}
+.item h3{font-size:1.3rem;margin-bottom:10px}
+.item p{color:var(--muted);font-size:.98rem}
+
+
+/* concept projects */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.project{display:flex;flex-direction:column;text-decoration:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg2);transition:border-color .2s}
+.project:hover{border-color:var(--blue)}
+.project{position:relative}
+.shot{position:relative;aspect-ratio:16/10;overflow:hidden;display:flex;align-items:flex-end;padding:18px;font-family:var(--display);font-weight:800;font-size:1.7rem}
+.shot iframe{position:absolute;top:0;left:0;width:400%;height:400%;border:0;transform:scale(.25);transform-origin:0 0;pointer-events:none;background:transparent}
+.stretch{color:inherit;text-decoration:none}
+.stretch::after{content:"";position:absolute;inset:0;border-radius:12px}
+.stretch:focus-visible{outline:none}
+.stretch:focus-visible::after{outline:3px solid var(--blue2);outline-offset:-3px}
+.p1 .shot{background:linear-gradient(135deg,#f3c6d3,#c7547a);color:#3a0f1f}
+.p2 .shot{background:linear-gradient(135deg,#e9d4b4,#8a5a2b);color:#2b1a0a}
+.p3 .shot{background:linear-gradient(135deg,#e8a64a,#7a3b14);color:#2a1205}
+.project .body{padding:20px 20px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.project h3{font-size:1.2rem}
+.project p{color:var(--muted);font-size:.95rem}
+.project .meta{font-size:.85rem;color:#C9CAD2}
+.project .go{margin-top:auto;padding-top:10px;color:var(--blue2);font-weight:600}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;align-items:stretch}
+.plan{border:1px solid var(--line);border-radius:12px;padding:30px 22px;display:flex;flex-direction:column;background:var(--bg)}
+.plan.best{border:2px solid var(--blue);position:relative}
+.plan .tag{position:absolute;top:-14px;left:24px;background:var(--blue);color:#fff;font-size:.82rem;font-weight:600;padding:4px 12px;border-radius:999px}
+.plan h3{font-size:1.4rem}
+.plan .amt{font-family:var(--display);font-size:2.5rem;font-weight:800;margin:14px 0 4px}
+.plan .amt small{font-size:.95rem;font-weight:500;color:var(--muted)}
+.plan .for{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+.plan ul{list-style:none;margin-bottom:26px;display:grid;gap:10px}
+.plan li{padding-left:26px;position:relative;color:#D6D7DE;font-size:.97rem}
+.plan li::before{content:"";position:absolute;left:2px;top:.5em;width:12px;height:7px;border-left:2px solid var(--blue2);border-bottom:2px solid var(--blue2);transform:rotate(-45deg)}
+.plan .btn{margin-top:auto;text-align:center}
+.addons{margin-top:56px}
+.addons h3{font-size:1.4rem;margin-bottom:14px}
+.addons table{width:100%;border-collapse:collapse}
+.addons td{padding:14px 0;border-bottom:1px solid var(--line)}
+.addons td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:20px}
+.addons tr:first-child td{border-top:1px solid var(--line)}
+.fine{margin-top:18px;font-size:.88rem;color:var(--muted)}
+
+/* process (true sequence) */
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px}
+.steps li{counter-increment:s;border-left:2px solid var(--line);padding-left:20px}
+.steps li::before{content:"0" counter(s);font-family:var(--display);font-size:1.9rem;font-weight:800;color:var(--blue)}
+.steps h3{font-size:1.2rem;margin:6px 0 8px}
+.steps p{color:var(--muted);font-size:.96rem}
+
+/* region */
+.region .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;margin-top:36px;align-items:start}
+.region p{color:#C0C1CA}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.92rem;color:#C9CAD2}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue2);font-size:1.5rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;color:var(--muted);max-width:70ch}
+.faq-list{margin-top:40px}
+
+/* cta + contact */
+.contact .grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;margin-top:8px}
+.details{list-style:none;margin-top:28px}
+.details li{margin-bottom:14px}
+.details small{display:block;color:var(--muted)}
+.details a{font-weight:600;text-decoration-color:var(--blue);text-underline-offset:4px}
+form{display:grid;gap:16px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:12px 14px;border:1.5px solid #34343C;border-radius:8px;background:#0E0E11;color:#fff;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--blue2);outline:3px solid rgba(47,107,255,.3)}
+textarea{min-height:130px;resize:vertical}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.9rem;color:var(--muted)}
+.consent input{width:auto;margin-top:5px}
+form .btn{justify-self:start}
+.note{font-size:.88rem;color:var(--muted)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:64px 0 36px;background:var(--bg2);color:var(--muted);font-size:.95rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font-family:var(--display);margin-bottom:12px;font-size:1rem}
+footer a{display:block;text-decoration:none;margin-bottom:8px}
+footer a:hover{color:#fff}
+footer a.soc{display:flex;margin-bottom:0}
+.legal{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.88rem}
+.legal a{display:inline;margin:0 0 0 18px}
+
+.legalgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:36px}
+.legalgrid h3{font-size:1.2rem;margin-bottom:10px}
+.legalgrid p{color:var(--muted);font-size:.96rem}
+.legalgrid .fine{margin-top:10px}
+@media(max-width:1000px){.plans{grid-template-columns:1fr 1fr}.legalgrid{grid-template-columns:1fr}}
+@media(max-width:860px){.legalgrid{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr;gap:6px}.menu-links a{font-size:1.35rem}.menu-side{padding-top:14px}
+  .why .grid,.region .grid,.contact .grid,.cols3,.projects,.plans{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  section{padding:72px 0}
+  .hero{padding:150px 0 80px}
+  .beam{right:-470px;top:-420px}
+}
+@media(max-width:520px){.steps,.fgrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.beam{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+
+<header>
+  <input type="checkbox" id="menuToggle" class="mt" aria-label="Open menu">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Manarix</a>
+      <label for="menuToggle" class="menu-btn"><span>Menu</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></label>
+    </nav>
+  </div>
+  <div class="menu-panel" id="menuPanel">
+    <div class="wrap menu-grid">
+      <ul class="menu-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Concept projects</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-side">
+        <h4>Contact</h4>
+        <a class="soc" href="mailto:hello@manarix.eu">hello@manarix.eu</a>
+        <h4>Legal</h4>
+        <a class="soc" href="#cookies">Cookie policy</a>
+        <a class="soc" href="#terms">Terms and privacy</a>
+        <button type="button" class="soc linkbtn" data-cookie-settings>Cookie settings</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="beam" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="crumbs"><a href="#top">Home</a> / Websites / Europe</p>
+      <h1>Websites that bring customers to you.</h1>
+      <p class="sub">Manarix builds clear, mobile-friendly websites for small businesses and sole traders, so customers can find you and trust you. Simple fixed prices, no agency overhead.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Send an inquiry</a>
+        <a class="btn ghost" href="#pricing">See pricing</a>
+      </div>
+      <p class="price"><b>Websites from €200</b>, excl. VAT. Choose a package from Starter to Complete. You agree the scope and price before work starts, and a 50% deposit books your slot.</p>
+    </div>
+  </div>
+
+  <section class="why alt" id="about">
+    <div class="wrap">
+      <h2>About us</h2>
+      <div class="grid">
+        <div>
+          <p>Manarix builds simple websites for small businesses and sole traders. I start with your business and your customers. What do you offer, who needs it, and what should a visitor do next? Every page has a clear job.</p>
+        </div>
+        <div>
+          <p>Every inquiry is answered personally. I design and build every site myself, so you deal directly with the person doing the work, with no account managers and no agency overhead.</p>
+          <a href="#pricing">See the packages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What I can help you with</h2>
+      <p class="lead">Simple websites for small businesses, built to be found and trusted.</p>
+      <div class="cols3">
+        <div class="item"><h3>Business websites</h3><p>From a one-page site to a ten-page website, with a mobile-friendly layout, contact form, map and social links.</p></div>
+        <div class="item"><h3>Shops and bookings</h3><p>Sell products or take bookings directly through your site, with payment integration set up for you.</p></div>
+        <div class="item"><h3>Search basics and analytics</h3><p>On-page SEO such as titles, descriptions and a sitemap, plus analytics so you can see who visits.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="work">
+    <div class="wrap">
+      <h2>Concept projects</h2>
+      <p class="lead">Live previews of three concept websites I designed to show my style and approach. They use sample content and are not real businesses. Tap a card to open the full site.</p>
+      <div class="projects">
+        <article class="project p1">
+          <div class="shot"><span class="shot-name">Bloom &amp; Co</span><iframe src="https://adamzoe-c.github.io/Bloom/index.html" title="Live preview of the Bloom &amp; Co concept website" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe></div>
+          <div class="body"><span class="meta">Florist online shop</span><h3><a class="stretch" href="https://adamzoe-c.github.io/Bloom/index.html" target="_blank" rel="noopener">Fresh flowers, two cities</a></h3><p>Shop with bouquet collections, occasions, weekly subscriptions and a quick-order helper for same-day delivery.</p><span class="go" aria-hidden="true">View live concept ↗</span></div>
+        </article>
+        <article class="project p2">
+          <div class="shot"><span class="shot-name">Casa Alba</span><iframe src="https://adamzoe-c.github.io/MAM/index.html" title="Live preview of the Casa Alba concept website" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe></div>
+          <div class="body"><span class="meta">Café, cocktail bar and bistro</span><h3><a class="stretch" href="https://adamzoe-c.github.io/MAM/index.html" target="_blank" rel="noopener">A bilingual hospitality site</a></h3><p>Italian and English versions, menus per area, gallery, reviews and location pages built to bring in bookings.</p><span class="go" aria-hidden="true">View live concept ↗</span></div>
+        </article>
+        <article class="project p3">
+          <div class="shot"><span class="shot-name">Nileva</span><iframe src="https://adamzoe-c.github.io/Nileva/index.html" title="Live preview of the Nileva concept website" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe></div>
+          <div class="body"><span class="meta">E-commerce shop</span><h3><a class="stretch" href="https://adamzoe-c.github.io/Nileva/index.html" target="_blank" rel="noopener">Sudan to your table</a></h3><p>Online store with product stories, order tracking and EU shipping information.</p><span class="go" aria-hidden="true">View live concept ↗</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Simple pricing</h2>
+      <p class="lead">Four packages from €200 to €1,500. Prices are excl. VAT and are example prices that can change before launch.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Starter</h3>
+          <div class="amt">€200</div>
+          <p class="for">For a sole trader who just needs to be found and look credible online.</p>
+          <ul><li>1-page site (single scroll)</li><li>Mobile-friendly layout</li><li>Contact form, map and socials</li><li>Basic on-page SEO</li><li>3-day turnaround</li></ul>
+          <a class="btn ghost" href="#contact" data-tier="Starter (€200)">Choose Starter</a>
+        </div>
+        <div class="plan">
+          <h3>Essential</h3>
+          <div class="amt">€400</div>
+          <p class="for">For a small business that needs Home, About, Services and Contact done properly.</p>
+          <ul><li>Up to 5 pages</li><li>Custom layout and branding</li><li>Contact form and Google Maps</li><li>SEO setup: titles, meta, sitemap</li><li>1 round of revisions</li></ul>
+          <a class="btn ghost" href="#contact" data-tier="Essential (€400)">Choose Essential</a>
+        </div>
+        <div class="plan best">
+          <span class="tag">Most booked</span>
+          <h3>Business</h3>
+          <div class="amt">€800</div>
+          <p class="for">For a growing business that wants to publish content and capture leads.</p>
+          <ul><li>Up to 10 pages</li><li>Blog or news section</li><li>Booking or inquiry form</li><li>Full SEO pass and analytics</li><li>2 rounds of revisions</li></ul>
+          <a class="btn" href="#contact" data-tier="Business (€800)">Choose Business</a>
+        </div>
+        <div class="plan">
+          <h3>Complete</h3>
+          <div class="amt"><small>from </small>€1,000</div>
+          <p class="for">For businesses selling or taking bookings directly. Larger builds go up to €1,500.</p>
+          <ul><li>Fully custom, unlimited pages</li><li>Online shop or booking system</li><li>Payment integration</li><li>Priority build and support</li><li>3 months of aftercare</li></ul>
+          <a class="btn ghost" href="#contact" data-tier="Complete (from €1,000)">Choose Complete</a>
+        </div>
+      </div>
+
+      <div class="addons">
+        <h3>How payment works</h3>
+        <table>
+          <tr><td>Deposit to start</td><td>50% of package price</td></tr>
+          <tr><td>Balance</td><td>Due on launch</td></tr>
+          <tr><td>Accepted via</td><td>Bank transfer, card link, PayPal</td></tr>
+        </table>
+        <p class="fine">Turnaround times are estimates and start once I have your content and brief. Changes beyond the revision rounds listed are quoted separately. Domain registration and hosting fees are not included.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="process">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>Inquiry</h3><p>Tell me about your business by email. I reply with the right package and the price.</p></li>
+        <li><h3>Deposit</h3><p>A 50% deposit books your build slot. You send your content, photos and brief.</p></li>
+        <li><h3>Build</h3><p>I build your site, share it for review and apply the revision rounds in your package.</p></li>
+        <li><h3>Launch</h3><p>The balance is due before the site goes live. Then I publish it.</p></li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        <details><summary>How much does a website cost?</summary><p>Packages start at €200 for a one-page site and go up to €1,500 for larger shops and booking sites. You get a confirmed price before any work starts.</p></details>
+        <details><summary>How long does it take?</summary><p>The Starter site has a 3-day turnaround. Other packages are agreed by email. Times start once we have your content and brief.</p></details>
+        <details><summary>What do I need to give you?</summary><p>Your logo if you have one, your text, photos and any links you want shown. If you are unsure, I can help you decide what to include.</p></details>
+        <details><summary>How does payment work?</summary><p>A 50% deposit secures your build slot and the balance is due before launch. You can pay by bank transfer, card link or PayPal.</p></details>
+        <details><summary>Will my site be first on Google?</summary><p>No one can promise that. I set up the basics, such as page titles, descriptions and a sitemap, so search engines can understand your site.</p></details>
+        <details><summary>What if I want changes after launch?</summary><p>Each package includes the revision rounds listed. Further changes are quoted separately. Complete includes 3 months of aftercare.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact alt" id="contact">
+    <div class="wrap">
+      <h2>Tell me about your business</h2>
+      <div class="grid">
+        <div>
+          <p class="lead">Fill in the form and it opens a ready-written email to send. I reply within one working day, usually sooner, and confirm the right package for you by email.</p>
+          <ul class="details">
+            <li><small>Email</small><a href="mailto:hello@manarix.eu">hello@manarix.eu</a></li>
+            <li><small>Phone</small><a href="tel:+31600000000">+31 6 00 00 00 00</a></li>
+            <li><small>Reply time</small>Within one working day</li>
+            <li><small>Location</small>Country, City</li>
+          </ul>
+        </div>
+        <form id="f">
+          <label>Your name <input name="name" required autocomplete="name"></label>
+          <label>Email <input type="email" name="email" required autocomplete="email"></label>
+          <label>Which package interests you?
+            <select name="tier" id="tier">
+              <option>Starter (€200)</option>
+              <option>Essential (€400)</option>
+              <option selected>Business (€800)</option>
+              <option>Complete (from €1,000)</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>Message <textarea name="msg" required></textarea></label>
+          <label class="consent"><input type="checkbox" required> I agree that Manarix may use my details to reply to this inquiry. See the privacy policy.</label>
+          <button class="btn" type="submit">Send inquiry</button>
+          <p class="note" id="status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="terms">
+    <div class="wrap">
+      <h2>Terms and privacy</h2>
+      <div class="legalgrid">
+        <div>
+          <h3>Terms of service</h3>
+          <p>A 50% deposit is required to book a build slot, and the remaining balance is due before the site goes live. Turnaround times are estimates and begin once your content and brief are received. Revision rounds are as listed per package; further changes are quoted separately.</p>
+          <p class="fine">Placeholder wording. Replace with terms suited to your business before going live.</p>
+        </div>
+        <div id="cookies">
+          <h3>Cookie policy</h3>
+          <p>This site uses essential cookies and local storage to work and to remember your cookie choice. Optional cookies, such as analytics, are only used if you accept them. You can change your choice any time with "Cookie settings".</p>
+          <p class="fine">Placeholder wording. Update it to match the tools you actually use.</p>
+        </div>
+        <div id="privacy">
+          <h3>Privacy policy</h3>
+          <p>Details sent through the contact form (name, email, project details) are used only to reply to your inquiry and are never sold or shared with third parties. This site uses only essential cookies.</p>
+          <p class="fine">Placeholder wording. Update it to match your actual data handling and your obligations under the EU GDPR.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#top" style="margin-bottom:14px">Manarix</a>
+        <p>Affordable websites for small businesses across Europe.</p>
+        <a href="mailto:hello@manarix.eu" style="margin-top:14px">hello@manarix.eu</a>
+        <a class="soc" href="https://www.instagram.com/" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>Instagram</a>
+        <a class="soc" href="https://www.linkedin.com/" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10v8M6 6.5v.01M10.5 18v-8M10.5 13.5a3.5 3.5 0 0 1 7 0V18"/></svg>LinkedIn</a>
+      </div>
+      <div><h4>Services</h4><a href="#pricing">Starter</a><a href="#pricing">Essential</a><a href="#pricing">Business</a><a href="#pricing">Complete</a></div>
+      <div><h4>Company</h4><a href="#about">About</a><a href="#work">Concept projects</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+      <div><h4>Contact</h4><a href="tel:+31600000000">+31 6 00 00 00 00</a><span>Country, City</span></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="y">2026</span> Manarix. Company registration no. [to be added]</span>
+      <span><a href="#terms">Terms</a><a href="#privacy">Privacy policy</a><a href="#cookies">Cookies</a><a href="#" data-cookie-settings>Cookie settings</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookieBar" role="dialog" aria-label="Cookie notice" hidden>
+  <p>This site uses essential cookies to work. With your permission, I may also use optional cookies to understand how visitors use the site. See the <a href="#cookies">cookie policy</a>.</p>
+  <div class="row">
+    <button class="btn" type="button" id="cookieAccept">Accept all</button>
+    <button class="btn ghost" type="button" id="cookieEssential">Essential only</button>
+  </div>
+</div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+// Menu: works without JS (checkbox); this just closes it after a tap
+(function(){
+  var t=document.getElementById('menuToggle'),pn=document.getElementById('menuPanel');
+  pn.addEventListener('click',function(e){if(e.target.closest('a'))t.checked=false});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')t.checked=false});
+})();
+// Cookie notice
+(function(){
+  var bar=document.getElementById('cookieBar');
+  function get(){try{return localStorage.getItem('manarix-cookies')}catch(e){return null}}
+  function set(v){try{localStorage.setItem('manarix-cookies',v)}catch(e){} bar.hidden=true}
+  if(!get())bar.hidden=false;
+  document.getElementById('cookieAccept').addEventListener('click',function(){set('all')});
+  document.getElementById('cookieEssential').addEventListener('click',function(){set('essential')});
+  document.querySelectorAll('[data-cookie-settings]').forEach(function(b){
+    b.addEventListener('click',function(e){e.preventDefault();document.getElementById('menuToggle').checked=false;bar.hidden=false});
+  });
+})();
+// Pick a package button -> preselect it in the form
+document.querySelectorAll('[data-tier]').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('tier').value=a.getAttribute('data-tier')});
+});
+// Placeholder: opens the visitor's email app. Replace with a form service (e.g. Formspree) when ready.
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(e.target);
+  var body=['Name: '+d.get('name'),'Email: '+d.get('email'),'Package: '+d.get('tier'),'',d.get('msg')].join('%0A');
+  window.location.href='mailto:hello@manarix.eu?subject='+encodeURIComponent('New inquiry: '+d.get('tier'))+'&body='+body.split('%0A').map(encodeURIComponent).join('%0A');
+  document.getElementById('status').textContent='Your email app should open with the message ready to send.';
+});
+</script>
+</body>
+</html>
