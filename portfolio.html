@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio and vision | Manarix</title>
-<meta name="description" content="Meet the designer behind Manarix, the vision behind the studio, and the concept websites designed so far.">
+<meta name="description" content="Meet the team behind Manarix, the vision behind the studio, and the concept websites we have designed so far.">
 <meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://manarix.eu/portfolio.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Manarix">
 <meta property="og:title" content="Portfolio and vision | Manarix">
-<meta property="og:description" content="The designer behind Manarix, the vision, and the websites designed so far.">
+<meta property="og:description" content="The team behind Manarix, our vision, and the websites we have designed so far.">
 <meta property="og:url" content="https://manarix.eu/portfolio.html">
 <meta property="og:image" content="https://manarix.eu/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -284,6 +284,64 @@ footer a.soc{display:flex;margin-bottom:0}
 .paycta{margin-top:24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .paycta .fine{margin:0}
 .big404{font-family:var(--display);font-weight:800;font-size:clamp(5rem,22vw,11rem);line-height:.9;color:var(--blue);letter-spacing:-.04em;margin-bottom:10px;position:relative}
+/* compact buttons */
+.btn{padding:10px 20px;font-size:.95rem;line-height:1.3;border-width:1.5px}
+.menu-btn,.mt:checked ~ .wrap .menu-btn{font-size:.92rem}
+.menu-btn{padding:8px 16px;gap:10px}
+.actions{margin-top:28px;gap:10px}
+.actions .btn{flex:1 1 0;min-width:130px;max-width:200px;text-align:center;padding:10px 14px}
+.plan .btn{padding:9px 16px}
+.proj-actions{gap:10px;margin-top:28px}
+@media(min-width:861px){.btn{padding:11px 22px;font-size:1rem}.menu-btn{padding:9px 18px;font-size:.95rem}.actions .btn{flex:0 0 auto;max-width:none}.plan .btn{padding:10px 18px}}
+@media(max-width:560px){.btn{padding:9px 16px;font-size:.9rem}.actions .btn{min-width:0}form .btn{justify-self:stretch}}
+/* hero art */
+.hero .beam,.hero::after{display:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;align-items:center}
+.hero-copy{min-width:0}
+.hero-art{position:relative;width:100%;max-width:300px;margin:0 auto;aspect-ratio:1/1}
+.hero-art svg{display:block;width:100%;height:100%}
+.spin{transform-origin:200px 200px;animation:artspin 40s linear infinite}
+.s-a{animation-duration:90s}.s-b{animation-duration:50s;animation-direction:reverse}.s-sweep{animation-duration:7s}
+.pulse{transform-origin:200px 200px;animation:artpulse 4s ease-in-out infinite}
+@keyframes artspin{to{transform:rotate(360deg)}}
+@keyframes artpulse{50%{transform:scale(1.12);opacity:.3}}
+@media(min-width:861px){.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px}.hero-art{max-width:520px;justify-self:end}.hero h1{font-size:clamp(2.5rem,5vw,4.2rem)}}
+@media(max-width:520px){.hero-art{max-width:250px}}
+@media(prefers-reduced-motion:reduce){.spin,.pulse{animation:none}}
+/* hero photo (falls back to the graphic if hero.jpg is missing) */
+.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:22px;border:1px solid rgba(91,140,255,.55);box-shadow:0 0 70px rgba(47,107,255,.45),0 0 0 6px rgba(47,107,255,.08);z-index:1}
+.hero-art.has-img{aspect-ratio:4/5}
+.hero-art.has-img svg{display:none}
+@media(min-width:861px){.hero-art.has-img{max-width:430px}}
+@media(max-width:520px){.hero-art.has-img{max-width:240px}}
+/* hero photo v2: no frame, edges fade into the black background */
+.hero-copy{position:relative;z-index:2}
+.hero-art.has-img img{border:0;border-radius:0;box-shadow:none;object-position:center 60%;-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 52%,transparent 100%)}
+@media(min-width:861px){.hero-art.has-img{max-width:480px;aspect-ratio:1/1.1}}
+@media(max-width:860px){
+  .hero-art.has-img{order:-1;width:calc(100% + 48px);max-width:none;margin:-150px -24px -90px;aspect-ratio:1/1}
+  .hero-art.has-img img{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%)}
+}
+
+/* persuasion: hook, why-a-website, cta band, exit offer */
+.hook{margin-top:18px;max-width:46ch;font-weight:600;color:var(--blue2);position:relative}
+.cols4{grid-template-columns:repeat(4,1fr);gap:0 28px}
+.cta-band{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:28px;padding:30px 32px;border:1px solid var(--opento-line);background:rgba(47,107,255,.08);border-radius:14px}
+.cta-band>div{flex:1 1 360px}
+.cta-band h3{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-bottom:8px}
+.cta-band p{color:var(--soft);max-width:60ch}
+.lead.hl{color:var(--soft2);margin-top:10px}
+.exit{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.72);backdrop-filter:blur(4px);animation:exitfade .25s ease-out}
+.exit-card{position:relative;width:100%;max-width:520px;background:var(--card);border:1px solid var(--card-line);border-top:3px solid var(--blue);border-radius:16px;padding:34px 30px 30px;box-shadow:0 20px 80px var(--shadow),0 0 60px rgba(47,107,255,.18)}
+.exit-card h3{font-size:clamp(1.6rem,4.5vw,2.1rem);margin:6px 0 12px}
+.exit-card p{color:var(--soft)}
+.exit-x{position:absolute;top:10px;right:12px;width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:var(--soft);font-size:1.7rem;line-height:1;cursor:pointer}
+.exit-x:hover{color:var(--strong)}
+.exit-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+@keyframes exitfade{from{opacity:0}to{opacity:1}}
+@media(max-width:1000px){.cols4{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.cols4{grid-template-columns:1fr}.cta-band{padding:24px 22px}}
+@media(prefers-reduced-motion:reduce){.exit{animation:none}}
 </style>
 </head>
 <body>
@@ -303,10 +361,12 @@ footer a.soc{display:flex;margin-bottom:0}
     <div class="wrap menu-grid">
       <ul class="menu-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#vision">The vision</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#vision">Our vision</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#process">How it works</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="menu-side">
@@ -326,27 +386,63 @@ footer a.soc{display:flex;margin-bottom:0}
 <main id="top">
   <div class="hero small">
     <div class="beam" aria-hidden="true"></div>
-    <div class="wrap">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
       <p class="crumbs"><a href="index.html">Home</a> / Portfolio</p>
       <h1>The work and the thinking behind it.</h1>
-      <p class="sub">Meet the person who designs and builds every Manarix website, why Manarix exists, and the sites designed so far.</p>
+      <p class="sub">Meet the team that designs and builds every Manarix website, why Manarix exists, and the sites we have designed so far.</p>
       <div class="actions">
         <a class="btn" href="#work">See the work</a>
         <a class="btn ghost" href="index.html#contact">Send an inquiry</a>
       </div>
+      </div>
+      <div class="hero-art">
+        <img src="hero.jpg" alt="Portrait of the person behind Manarix" width="880" height="1100" fetchpriority="high" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+          <defs>
+            <radialGradient id="ha-glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2F6BFF" stop-opacity=".55"/><stop offset=".55" stop-color="#2F6BFF" stop-opacity=".12"/><stop offset="1" stop-color="#2F6BFF" stop-opacity="0"/></radialGradient>
+            <radialGradient id="ha-core" cx="50%" cy="42%" r="58%"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#A9C3FF"/><stop offset=".6" stop-color="#2F6BFF"/><stop offset="1" stop-color="#0F2A5F"/></radialGradient>
+            <radialGradient id="ha-beam" gradientUnits="userSpaceOnUse" cx="200" cy="200" r="190"><stop offset="0" stop-color="#5B8CFF" stop-opacity=".55"/><stop offset="1" stop-color="#5B8CFF" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="200" fill="url(#ha-glow)"/>
+          <g class="spin s-sweep"><path d="M200 200 L390 200 A190 190 0 0 0 364.5 105 Z" fill="url(#ha-beam)"/></g>
+          <g class="spin s-a" fill="none" stroke="#2F6BFF" stroke-linecap="round">
+            <circle cx="200" cy="200" r="186" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="2 8"/>
+            <circle cx="200" cy="200" r="168" stroke="#5B8CFF" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="60 14 6 14"/>
+          </g>
+          <g transform="rotate(-18 200 200)" fill="none" stroke="#5B8CFF" stroke-width="1" stroke-opacity=".55">
+            <circle cx="200" cy="200" r="104" stroke-opacity=".9"/>
+            <ellipse cx="200" cy="200" rx="104" ry="14"/>
+            <ellipse cx="200" cy="148" rx="90" ry="12"/><ellipse cx="200" cy="252" rx="90" ry="12"/>
+            <ellipse cx="200" cy="114" rx="58" ry="8"/><ellipse cx="200" cy="286" rx="58" ry="8"/>
+            <ellipse cx="200" cy="200" rx="30" ry="104"/><ellipse cx="200" cy="200" rx="60" ry="104"/><ellipse cx="200" cy="200" rx="90" ry="104"/>
+            <path d="M200 96V304"/>
+          </g>
+          <g class="spin s-b">
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#5B8CFF" stroke-opacity=".35" stroke-width="1"/>
+            <circle cx="350" cy="200" r="11" fill="#5B8CFF" opacity=".3"/><circle cx="350" cy="200" r="5" fill="#C9DAFF"/>
+            <circle cx="70" cy="125" r="8" fill="#5B8CFF" opacity=".3"/><circle cx="70" cy="125" r="3.5" fill="#9DBBFF"/>
+            <circle cx="174" cy="348" r="8" fill="#5B8CFF" opacity=".3"/><circle cx="174" cy="348" r="3.5" fill="#9DBBFF"/>
+          </g>
+          <circle class="pulse" cx="200" cy="200" r="62" fill="#2F6BFF" opacity=".22"/>
+          <circle cx="200" cy="200" r="42" fill="url(#ha-core)"/>
+          <path d="M200 6v14M200 380v14M6 200h14M380 200h14" stroke="#5B8CFF" stroke-opacity=".6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <g fill="#9DBBFF"><circle cx="60" cy="70" r="1.4" opacity=".8"/><circle cx="340" cy="60" r="1.2" opacity=".6"/><circle cx="350" cy="330" r="1.5" opacity=".8"/><circle cx="48" cy="300" r="1.2" opacity=".6"/><circle cx="300" cy="372" r="1.3" opacity=".7"/><circle cx="112" cy="26" r="1.3" opacity=".7"/></g>
+        </svg>
+      </div>
     </div>
   </div>
 
-  <section class="alt" id="about">
+    <section class="alt" id="about">
     <div class="wrap">
-      <h2>About me</h2>
+      <h2>About us</h2>
       <div class="prose" style="margin-top:28px">
-        <p>I'm the designer and developer behind Manarix. I design and build every website myself, from the first sketch to launch day, so there is nobody between you and the work.</p>
-        <p>I work with small businesses and sole traders who need a clear, professional website without paying agency prices. Every inquiry is answered by me, and the person you write to is the person who builds your site.</p>
-        <p>The projects below are concept websites I designed to explore different industries: flowers, hospitality, finance and food. They show how I think about layout, clarity and what a visitor should do next.</p>
+        <p>We're the designers and developers behind Manarix. We design and build every website ourselves, from the first sketch to launch day, so there is nobody between you and the work.</p>
+        <p>We work with small businesses and sole traders who need a clear, professional website without paying agency prices. Every inquiry is answered by us, and the people you write to are the people who build your site.</p>
+        <p>The projects below are concept websites we designed to explore different industries: flowers, hospitality, finance and food. They show how we think about layout, clarity and what a visitor should do next.</p>
       </div>
       <div class="opento">
-        <div style="flex:1 1 280px"><span class="status">Open to work opportunities</span><p>Alongside Manarix, I'm open to work opportunities. If you have a role, a project or a collaboration in mind, send me a message and tell me what you're looking for.</p></div>
+        <div style="flex:1 1 280px"><span class="status">Open to work opportunities</span><p>Alongside Manarix, we're open to work opportunities. If you have a role, a project or a collaboration in mind, send us a message and tell us what you're looking for.</p></div>
         <a class="btn" href="index.html#contact">Get in touch</a>
       </div>
     </div>
@@ -355,11 +451,11 @@ footer a.soc{display:flex;margin-bottom:0}
   <section id="vision">
     <div class="wrap">
       <h2>The vision behind Manarix</h2>
-      <p class="lead">A good website should be within reach of every small business, not only those with an agency budget.</p>
+      <p class="lead">A good website should be within reach of every small business, not only those with an agency budget. Being easy to find is no longer a luxury. It's how customers decide who to trust.</p>
       <div class="cols3">
         <div class="item"><h3>Clear</h3><p>Every page has a job. Visitors should quickly see who you are, what you offer and what to do next.</p></div>
         <div class="item"><h3>Affordable</h3><p>Fixed packages from €200 to €1,500, with the scope and price agreed before any work starts.</p></div>
-        <div class="item"><h3>Personal</h3><p>One person answers your inquiry, builds your site and stays your point of contact until launch.</p></div>
+        <div class="item"><h3>Personal</h3><p>The same people answer your inquiry, build your site and stay your point of contact until launch.</p></div>
       </div>
       <p class="lead" style="margin-top:12px">The Manarix logo is a light with a beam: a simple signal that helps the right customers find you.</p>
     </div>
@@ -368,7 +464,7 @@ footer a.soc{display:flex;margin-bottom:0}
   <section class="alt" id="work">
     <div class="wrap">
       <h2>Work</h2>
-      <p class="lead">Every project below is a concept website I designed and built, using sample content. Open any card to visit the live site. The blue button shows the package price for a similar site.</p>
+      <p class="lead">Every project below is a concept website we designed and built, using sample content. Open any card to visit the live site. The blue button shows the package price for a similar site.</p>
       <div class="projects two">
         <article class="project p1">
           <div class="shot"><span class="shot-name">Bloom &amp; Co</span><iframe src="https://adamzoe-c.github.io/Bloom/index.html" title="Live preview of the Bloom &amp; Co concept website" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe></div>
@@ -393,7 +489,7 @@ footer a.soc{display:flex;margin-bottom:0}
   <section id="start">
     <div class="wrap">
       <h2>Want a site like these?</h2>
-      <p class="lead">Choose a package from €200 and send me a short inquiry about your business.</p>
+      <p class="lead">Your next customer is searching right now. Choose a package from €200, send us a short inquiry about your business, and let's make sure they find you.</p>
       <div class="actions">
         <a class="btn" href="index.html#contact">Send an inquiry</a>
         <a class="btn ghost" href="index.html#pricing">See pricing</a>
@@ -426,7 +522,7 @@ footer a.soc{display:flex;margin-bottom:0}
 <a class="wa-float" data-show="whatsapp" data-wa-link href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" hidden><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16.04 4C9.4 4 4.03 9.3 4.03 15.83c0 2.1.56 4.15 1.62 5.95L4 28l6.4-1.67a12.1 12.1 0 0 0 5.64 1.4c6.64 0 12.02-5.3 12.02-11.83C28.06 9.3 22.68 4 16.04 4Zm0 21.7c-1.8 0-3.55-.48-5.08-1.38l-.36-.21-3.8 1 1.02-3.7-.24-.38a9.6 9.6 0 0 1-1.5-5.2c0-5.3 4.4-9.6 9.96-9.6 5.55 0 9.96 4.3 9.96 9.6 0 5.3-4.4 9.87-9.96 9.87Zm5.5-7.2c-.3-.15-1.8-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.17.2-.35.23-.65.08-.3-.15-1.27-.46-2.42-1.46-.9-.78-1.5-1.75-1.67-2.05-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.52-.08-.15-.68-1.6-.93-2.2-.25-.57-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1-1.05 2.45s1.08 2.85 1.23 3.05c.15.2 2.1 3.2 5.1 4.5.7.3 1.27.5 1.7.62.72.22 1.37.2 1.88.12.58-.08 1.78-.72 2.03-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.58-.35Z"/></svg></a>
 
 <div class="cookie" id="cookieBar" role="dialog" aria-label="Cookie notice" hidden>
-  <p>This site uses essential cookies to work. With your permission, I may also use optional cookies to understand how visitors use the site. See the <a href="index.html#cookies">cookie policy</a>.</p>
+  <p>This site uses essential cookies to work. With your permission, we may also use optional cookies to understand how visitors use the site. See the <a href="index.html#cookies">cookie policy</a>.</p>
   <div class="row">
     <button class="btn" type="button" id="cookieAccept">Accept all</button>
     <button class="btn ghost" type="button" id="cookieEssential">Essential only</button>
@@ -441,6 +537,10 @@ window.SITE={
   formEndpoint:'', // e.g. 'https://formspree.io/f/abcdwxyz' -> sends the inquiry form directly
   paymentUrl:''    // Stripe or PayPal payment link -> shows a "Pay your deposit" button
 };
+// Runs only after a visitor clicks "Accept all". Put your analytics loader here (e.g. add the script tag).
+window.loadOptionalCookies=function(){
+  // var s=document.createElement('script');s.src='https://YOUR-ANALYTICS-SCRIPT';s.defer=true;document.head.appendChild(s);
+};
 </script>
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
@@ -454,16 +554,19 @@ document.getElementById('y').textContent=new Date().getFullYear();
   document.querySelectorAll('[data-wa-link]').forEach(function(a){if(c.whatsapp){a.href='https://wa.me/'+dg(c.whatsapp)}});
   document.querySelectorAll('[data-pay-link]').forEach(function(a){if(c.paymentUrl){a.href=c.paymentUrl}});
 })();
+// Menu: works without JS (checkbox); this just closes it after a tap
 (function(){
   var t=document.getElementById('menuToggle'),pn=document.getElementById('menuPanel');
   pn.addEventListener('click',function(e){if(e.target.closest('a'))t.checked=false});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')t.checked=false});
 })();
+// Cookie notice
 (function(){
   var bar=document.getElementById('cookieBar');
   function get(){try{return localStorage.getItem('manarix-cookies')}catch(e){return null}}
-  function set(v){try{localStorage.setItem('manarix-cookies',v)}catch(e){} bar.hidden=true}
-  if(!get())bar.hidden=false;
+  function opt(v){if(v==='all'&&typeof window.loadOptionalCookies==='function'&&!window._optLoaded){window._optLoaded=true;window.loadOptionalCookies()}}
+  function set(v){try{localStorage.setItem('manarix-cookies',v)}catch(e){} bar.hidden=true;opt(v)}
+  if(!get())bar.hidden=false;else opt(get());
   document.getElementById('cookieAccept').addEventListener('click',function(){set('all')});
   document.getElementById('cookieEssential').addEventListener('click',function(){set('essential')});
   document.querySelectorAll('[data-cookie-settings]').forEach(function(b){

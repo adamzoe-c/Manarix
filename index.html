@@ -327,6 +327,26 @@ footer a.soc{display:flex;margin-bottom:0}
   .hero-art.has-img{order:-1;width:calc(100% + 48px);max-width:none;margin:-150px -24px -90px;aspect-ratio:1/1}
   .hero-art.has-img img{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%)}
 }
+
+/* persuasion: hook, why-a-website, cta band, exit offer */
+.hook{margin-top:28px;max-width:44ch;padding-left:16px;border-left:2px solid var(--blue);font-size:1.02rem;font-weight:500;color:var(--soft2);position:relative}
+.cols4{grid-template-columns:repeat(4,1fr);gap:0 28px}
+.cta-band{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:28px;padding:30px 32px;border:1px solid var(--opento-line);background:rgba(47,107,255,.08);border-radius:14px}
+.cta-band>div{flex:1 1 360px}
+.cta-band h3{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-bottom:8px}
+.cta-band p{color:var(--soft);max-width:60ch}
+.lead.hl{color:var(--soft2);margin-top:10px}
+.exit{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.72);backdrop-filter:blur(4px);animation:exitfade .25s ease-out}
+.exit-card{position:relative;width:100%;max-width:520px;background:var(--card);border:1px solid var(--card-line);border-top:3px solid var(--blue);border-radius:16px;padding:34px 30px 30px;box-shadow:0 20px 80px var(--shadow),0 0 60px rgba(47,107,255,.18)}
+.exit-card h3{font-size:clamp(1.6rem,4.5vw,2.1rem);margin:6px 0 12px}
+.exit-card p{color:var(--soft)}
+.exit-x{position:absolute;top:10px;right:12px;width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:var(--soft);font-size:1.7rem;line-height:1;cursor:pointer}
+.exit-x:hover{color:var(--strong)}
+.exit-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+@keyframes exitfade{from{opacity:0}to{opacity:1}}
+@media(max-width:1000px){.cols4{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.cols4{grid-template-columns:1fr}.cta-band{padding:24px 22px}}
+@media(prefers-reduced-motion:reduce){.exit{animation:none}}
 </style>
 </head>
 <body>
@@ -382,6 +402,7 @@ footer a.soc{display:flex;margin-bottom:0}
         <a class="btn ghost" href="#pricing">See pricing</a>
       </div>
       <p class="price"><b>Websites from €200</b>, excl. VAT. Choose a package from Starter to Complete. You agree the scope and price before work starts, and a 50% deposit books your slot.</p>
+      <p class="hook">Right now, someone is searching for a business like yours. Make sure they find you, not the competition.</p>
       </div>
       <div class="hero-art">
         <img src="hero.jpg" alt="Portrait of the person behind Manarix" width="880" height="1100" fetchpriority="high" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
@@ -420,16 +441,36 @@ footer a.soc{display:flex;margin-bottom:0}
     </div>
   </div>
 
+  <section class="why-site" id="why-website">
+    <div class="wrap">
+      <h2>Your next customer is already searching.</h2>
+      <p class="lead">When people need what you sell, they don't flip through a phone book. They search, scroll and choose in seconds. A business without a proper website isn't even in the running.</p>
+      <div class="cols3 cols4">
+        <div class="item"><h3>Be found, day and night</h3><p>Your website answers questions, shows your services and collects inquiries at 2 a.m., on weekends and while you're busy with other customers.</p></div>
+        <div class="item"><h3>Look trustworthy at first glance</h3><p>People check a business online before they spend money or pick up the phone. A clear, professional site tells them you're real, reliable and worth the call.</p></div>
+        <div class="item"><h3>Stop handing customers to competitors</h3><p>If the business next door has a website and you don't, they get the booking. A proper site puts you back in the race.</p></div>
+        <div class="item"><h3>Own your place online</h3><p>Social media pages come and go, and the rules keep changing. Your website is yours: your words, your brand, your customers.</p></div>
+      </div>
+      <div class="cta-band">
+        <div>
+          <h3>A website costs less than you think. Not having one costs more.</h3>
+          <p>Every day without one, people who were ready to buy choose someone else. Packages start at €200, with the price agreed before any work begins.</p>
+        </div>
+        <a class="btn" href="#pricing">See packages from €200</a>
+      </div>
+    </div>
+  </section>
+
   <section class="why alt" id="about">
     <div class="wrap">
       <h2>About us</h2>
       <div class="grid">
         <div>
-          <p>Manarix builds simple websites for small businesses and sole traders. I start with your business and your customers. What do you offer, who needs it, and what should a visitor do next? Every page has a clear job.</p>
+          <p>Manarix builds simple websites for small businesses and sole traders. We start with your business and your customers. What do you offer, who needs it, and what should a visitor do next? Every page has a clear job.</p>
         </div>
         <div>
-          <p>Every inquiry is answered personally. I design and build every site myself, so you deal directly with the person doing the work, with no account managers and no agency overhead.</p>
-          <p>I'm also open to work opportunities. If you have a role or collaboration in mind, send me a message.</p>
+          <p>Every inquiry is answered personally. We design and build every site ourselves, so you deal directly with the people doing the work, with no account managers and no agency overhead.</p>
+          <p>We're also open to work opportunities. If you have a role or collaboration in mind, send us a message.</p>
           <a href="#pricing">See the packages</a>
         </div>
       </div>
@@ -438,7 +479,7 @@ footer a.soc{display:flex;margin-bottom:0}
 
   <section id="services">
     <div class="wrap">
-      <h2>What I can help you with</h2>
+      <h2>What we can help you with</h2>
       <p class="lead">Simple websites for small businesses, built to be found and trusted.</p>
       <div class="cols3">
         <div class="item"><h3>Business websites</h3><p>From a one-page site to a ten-page website, with a mobile-friendly layout, contact form, map and social links.</p></div>
@@ -451,7 +492,7 @@ footer a.soc{display:flex;margin-bottom:0}
   <section class="alt" id="work">
     <div class="wrap">
       <h2>Concept projects</h2>
-      <p class="lead">Live previews of concept websites I designed to show my style and approach. They use sample content and are not real businesses. Tap a card to open the full site. The blue button shows the package price for a similar site.</p>
+      <p class="lead">Live previews of concept websites we designed to show our style and approach. They use sample content and are not real businesses. Tap a card to open the full site. The blue button shows the package price for a similar site.</p>
       <input type="checkbox" id="moreToggle" class="more-toggle" aria-label="Show more concept projects">
       <div class="projects">
         <article class="project p4">
@@ -482,6 +523,7 @@ footer a.soc{display:flex;margin-bottom:0}
     <div class="wrap">
       <h2>Simple pricing</h2>
       <p class="lead">Four packages from €200 to €1,500. Prices are excl. VAT and confirmed in writing before work starts.</p>
+      <p class="lead hl">Think of it this way: a few new customers can pay for your whole website, and it keeps working for you long after launch.</p>
       <div class="plans">
         <div class="plan">
           <h3>Starter</h3>
@@ -527,7 +569,7 @@ footer a.soc{display:flex;margin-bottom:0}
           </div></td></tr>
         </table>
         <div class="paycta" data-show="payment" hidden><a class="btn" data-pay-link href="#" target="_blank" rel="noopener">Pay your deposit</a><p class="fine">Enter the deposit amount agreed for your package.</p></div>
-        <p class="fine">Turnaround times are estimates and start once I have your content and brief. Changes beyond the revision rounds listed are quoted separately. Card payments are sent as a secure payment link. Domain registration and hosting fees are not included.</p>
+        <p class="fine">Turnaround times are estimates and start once we have your content and brief. Changes beyond the revision rounds listed are quoted separately. Card payments are sent as a secure payment link. Domain registration and hosting fees are not included.</p>
       </div>
     </div>
   </section>
@@ -536,10 +578,10 @@ footer a.soc{display:flex;margin-bottom:0}
     <div class="wrap">
       <h2>How it works</h2>
       <ol class="steps">
-        <li><h3>Inquiry</h3><p>Tell me about your business by email. I reply with the right package and the price.</p></li>
+        <li><h3>Inquiry</h3><p>Tell us about your business by email. We reply with the right package and the price.</p></li>
         <li><h3>Deposit</h3><p>A 50% deposit books your build slot. You send your content, photos and brief.</p></li>
-        <li><h3>Build</h3><p>I build your site, share it for review and apply the revision rounds in your package.</p></li>
-        <li><h3>Launch</h3><p>The balance is due before the site goes live. Then I publish it.</p></li>
+        <li><h3>Build</h3><p>We build your site, share it for review and apply the revision rounds in your package.</p></li>
+        <li><h3>Launch</h3><p>The balance is due before the site goes live. Then we publish it.</p></li>
       </ol>
     </div>
   </section>
@@ -549,11 +591,13 @@ footer a.soc{display:flex;margin-bottom:0}
     <div class="wrap">
       <h2>Frequently asked questions</h2>
       <div class="faq-list">
+        <details><summary>I'm already on social media. Do I still need a website?</summary><p>Social pages are great for staying in touch, but you don't control them and they're hard to find through search. A website gives customers one trusted place to see what you do and how to reach you, and it works alongside your social profiles.</p></details>
+        <details><summary>Is a website worth it for a very small business?</summary><p>Often more than for a big one. A small business can't afford to lose customers it never knew it missed. A simple, clear site from €200 makes you easier to find, easier to trust and easier to contact.</p></details>
         <details><summary>How much does a website cost?</summary><p>Packages start at €200 for a one-page site and go up to €1,500 for larger shops and booking sites. You get a confirmed price before any work starts.</p></details>
         <details><summary>How long does it take?</summary><p>The Starter site has a 3-day turnaround. Other packages are agreed by email. Times start once we have your content and brief.</p></details>
-        <details><summary>What do I need to give you?</summary><p>Your logo if you have one, your text, photos and any links you want shown. If you are unsure, I can help you decide what to include.</p></details>
+        <details><summary>What do I need to give you?</summary><p>Your logo if you have one, your text, photos and any links you want shown. If you are unsure, we can help you decide what to include.</p></details>
         <details><summary>How does payment work?</summary><p>A 50% deposit secures your build slot and the balance is due before launch. You can pay by bank transfer, card link or PayPal.</p></details>
-        <details><summary>Will my site be first on Google?</summary><p>No one can promise that. I set up the basics, such as page titles, descriptions and a sitemap, so search engines can understand your site.</p></details>
+        <details><summary>Will my site be first on Google?</summary><p>No one can promise that. We set up the basics, such as page titles, descriptions and a sitemap, so search engines can understand your site.</p></details>
         <details><summary>What if I want changes after launch?</summary><p>Each package includes the revision rounds listed. Further changes are quoted separately. Complete includes 3 months of aftercare.</p></details>
       </div>
     </div>
@@ -561,14 +605,14 @@ footer a.soc{display:flex;margin-bottom:0}
 
   <section class="contact alt" id="contact">
     <div class="wrap">
-      <h2>Tell me about your business</h2>
+      <h2>Ready to be found? Tell us about your business.</h2>
       <div class="grid">
         <div>
-          <p class="lead">Fill in the form and it opens a ready-written email to send. I reply within one working day, usually sooner, and confirm the right package for you by email. I am also open to work opportunities, so choose &ldquo;Work opportunity&rdquo; if that is why you are writing.</p>
+          <p class="lead">Your next customer is searching right now, so let's make sure they find you. Fill in the form and it opens a ready-written email to send. We reply within one working day, usually sooner, and confirm the right package for you by email. We are also open to work opportunities, so choose &ldquo;Work opportunity&rdquo; if that is why you are writing.</p>
           <ul class="details">
             <li><small>Email</small><a href="mailto:hello@manarix.eu">hello@manarix.eu</a></li>
             <li data-show="phone" hidden><small>Phone</small><a data-phone-link href="#"></a></li>
-            <li data-show="whatsapp" hidden><small>WhatsApp</small><a data-wa-link href="#" target="_blank" rel="noopener">Message me on WhatsApp</a></li>
+            <li data-show="whatsapp" hidden><small>WhatsApp</small><a data-wa-link href="#" target="_blank" rel="noopener">Message us on WhatsApp</a></li>
             <li><small>Reply time</small>Within one working day</li>
           </ul>
         </div>
@@ -642,8 +686,21 @@ footer a.soc{display:flex;margin-bottom:0}
 
 <a class="wa-float" data-show="whatsapp" data-wa-link href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" hidden><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16.04 4C9.4 4 4.03 9.3 4.03 15.83c0 2.1.56 4.15 1.62 5.95L4 28l6.4-1.67a12.1 12.1 0 0 0 5.64 1.4c6.64 0 12.02-5.3 12.02-11.83C28.06 9.3 22.68 4 16.04 4Zm0 21.7c-1.8 0-3.55-.48-5.08-1.38l-.36-.21-3.8 1 1.02-3.7-.24-.38a9.6 9.6 0 0 1-1.5-5.2c0-5.3 4.4-9.6 9.96-9.6 5.55 0 9.96 4.3 9.96 9.6 0 5.3-4.4 9.87-9.96 9.87Zm5.5-7.2c-.3-.15-1.8-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.17.2-.35.23-.65.08-.3-.15-1.27-.46-2.42-1.46-.9-.78-1.5-1.75-1.67-2.05-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.52-.08-.15-.68-1.6-.93-2.2-.25-.57-.5-.5-.68-.5h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1-1.05 2.45s1.08 2.85 1.23 3.05c.15.2 2.1 3.2 5.1 4.5.7.3 1.27.5 1.7.62.72.22 1.37.2 1.88.12.58-.08 1.78-.72 2.03-1.42.25-.7.25-1.3.18-1.42-.08-.12-.28-.2-.58-.35Z"/></svg></a>
 
+<div class="exit" id="exitModal" role="dialog" aria-modal="true" aria-labelledby="exitTitle" hidden>
+  <div class="exit-card">
+    <button type="button" class="exit-x" id="exitClose" aria-label="Close">&times;</button>
+    <span class="status">Before you go</span>
+    <h3 id="exitTitle">Your competitors are online. Are you?</h3>
+    <p>Every day without a proper website is a day customers who were ready to buy choose someone else. Get a clear, mobile-friendly site from €200, with the price agreed before any work starts.</p>
+    <div class="exit-actions">
+      <a class="btn" href="#contact">Get my website</a>
+      <a class="btn ghost" href="#pricing">See pricing</a>
+    </div>
+  </div>
+</div>
+
 <div class="cookie" id="cookieBar" role="dialog" aria-label="Cookie notice" hidden>
-  <p>This site uses essential cookies to work. With your permission, I may also use optional cookies to understand how visitors use the site. See the <a href="#cookies">cookie policy</a>.</p>
+  <p>This site uses essential cookies to work. With your permission, we may also use optional cookies to understand how visitors use the site. See the <a href="#cookies">cookie policy</a>.</p>
   <div class="row">
     <button class="btn" type="button" id="cookieAccept">Accept all</button>
     <button class="btn ghost" type="button" id="cookieEssential">Essential only</button>
@@ -711,7 +768,7 @@ document.querySelectorAll('[data-tier]').forEach(function(a){
       btn.disabled=true;st.textContent='Sending...';
       fetch(c.formEndpoint,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){
         if(!r.ok)throw new Error('bad');
-        form.reset();st.textContent='Thank you! Your inquiry was sent. I will reply within one working day.';
+        form.reset();st.textContent='Thank you! Your inquiry was sent. We will reply within one working day.';
       }).catch(function(){
         st.textContent='Something went wrong. Please email hello@manarix.eu directly.';
       }).then(function(){btn.disabled=false});
@@ -719,6 +776,39 @@ document.querySelectorAll('[data-tier]').forEach(function(a){
       var body=['Name: '+d.get('name'),'Email: '+d.get('email'),'Package: '+d.get('tier'),'',d.get('message')].map(encodeURIComponent).join('%0A');
       window.location.href='mailto:hello@manarix.eu?subject='+encodeURIComponent('New inquiry: '+d.get('tier'))+'&body='+body;
       st.textContent='Your email app should open with the message ready to send.';
+    }
+  });
+})();
+// Exit offer: shown once per visit when a desktop visitor heads for the tab bar, or after a while on touch devices
+(function(){
+  var m=document.getElementById('exitModal'),closeBtn=document.getElementById('exitClose'),bar=document.getElementById('cookieBar'),last=null,armed=false,done=false;
+  try{if(sessionStorage.getItem('manarix-exit'))return}catch(e){}
+  setTimeout(function(){armed=true},8000);
+  function busy(){
+    var f=document.getElementById('f');
+    return !bar.hidden||document.getElementById('menuToggle').checked||(f&&f.contains(document.activeElement));
+  }
+  function open(){
+    if(done||busy())return false;
+    done=true;try{sessionStorage.setItem('manarix-exit','1')}catch(e){}
+    last=document.activeElement;m.hidden=false;closeBtn.focus();return true;
+  }
+  function close(){m.hidden=true;if(last&&last.focus)last.focus()}
+  document.addEventListener('mouseout',function(e){
+    if(armed&&!e.relatedTarget&&e.clientY<=0)open();
+  });
+  if(window.matchMedia&&window.matchMedia('(hover:none)').matches){
+    var tries=0;setTimeout(function wait(){if(done||tries++>6)return;if(!open())setTimeout(wait,10000)},45000);
+  }
+  closeBtn.addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m||e.target.closest('a'))close()});
+  document.addEventListener('keydown',function(e){
+    if(m.hidden)return;
+    if(e.key==='Escape'){close();return}
+    if(e.key==='Tab'){
+      var f=m.querySelectorAll('button,a[href]'),a=f[0],z=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}
+      else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
     }
   });
 })();
