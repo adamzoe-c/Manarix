@@ -319,6 +319,14 @@ footer a.soc{display:flex;margin-bottom:0}
 .hero-art.has-img svg{display:none}
 @media(min-width:861px){.hero-art.has-img{max-width:430px}}
 @media(max-width:520px){.hero-art.has-img{max-width:240px}}
+/* hero photo v2: no frame, edges fade into the black background */
+.hero-copy{position:relative;z-index:2}
+.hero-art.has-img img{border:0;border-radius:0;box-shadow:none;object-position:center 60%;-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 52%,transparent 100%)}
+@media(min-width:861px){.hero-art.has-img{max-width:480px;aspect-ratio:1/1.1}}
+@media(max-width:860px){
+  .hero-art.has-img{order:-1;width:calc(100% + 48px);max-width:none;margin:-150px -24px -90px;aspect-ratio:1/1}
+  .hero-art.has-img img{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 55%,transparent 100%)}
+}
 </style>
 </head>
 <body>
